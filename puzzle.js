@@ -20,12 +20,12 @@ window.onload = function() {
       tile.src = imgOrder.shift() + ".jpg"
 
       //Drag function 
-      tile.addEventListener("dragstart", dragStart)
-      tile.addEventListener("dragover", dragOver)
-      tile.addEventListener("dragenter", dragEnter)
-      tile.addEventListener("dragleavre", dragLeave)
-      tile.addEventListener("drop", dragDrop)
-      tile.addEventListener("dragend", dragEnd)
+      tile.addEventListener("dragstart", dragStart)  //clike an image and you can drag it
+      tile.addEventListener("dragover", dragOver)    // being able to move the img when it is cliked 
+      tile.addEventListener("dragenter", dragEnter)  //dragging the img onto a differnt one 
+      tile.addEventListener("dragleavre", dragLeave) //dragging the img and leaving the img on another one
+      tile.addEventListener("drop", dragDrop)        //drag an img over a differn't one an ddrop the img
+      tile.addEventListener("dragend", dragEnd)      //after drang and drop, swap the two tiles
 
       document.getElementById("bard").append(tile)
 
@@ -52,3 +52,14 @@ function dragLeave() {
 function dragDrop() {
   otherTile = this // this refers to the img tile being dropped on
 }
+
+function dragEnd() {
+  if(!otherTile.src.includes("3.jpg")) {
+    return
+  }
+
+  let currCoords = currTile.id.split("-") //ex) "0-0" -> ["0", "0"]
+  let r = parseInt(currCoods[0])
+  let c = parseInt(currCoords[1])
+}
+
