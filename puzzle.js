@@ -1,4 +1,4 @@
-
+// CHLOE REMEMBER TO CHAnge to let OKI LY
 var rows = 3
 var columns = 3
 
@@ -61,5 +61,26 @@ function dragEnd() {
   let currCoords = currTile.id.split("-") //ex) "0-0" -> ["0", "0"]
   let r = parseInt(currCoods[0])
   let c = parseInt(currCoords[1])
-}
 
+  let otherCoords = otherTile.id.split("-")
+  let r2 = parseInt(currCoods[0])
+  let c2 = parseInt(currCoods[1])
+
+  let moveleft = r == r2 && c2 == c-1
+  let moveRight = r == r2 && c2 == c+1
+
+  let moveUp = c == c2 && r2 == r-1
+  let moveDown = c == c2 && r2 == r+1
+
+  let isAdjacent = moveleft || moveDown || moveUp || moveDown
+
+  if (isAdjacent) {
+    let currImg = currTile.src
+    let otherImg = otherTile.scr
+    
+    currTile.src = otherImg
+    otherTile.src = currImg
+
+    document.getElementById("turns").innerText = turns
+  }
+}
