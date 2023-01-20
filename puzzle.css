@@ -1,25 +1,25 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: rgb(12 103 174);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: rgb(12 103 174);
 }
 #title {
-    height: 150px;
-    width: 400px;
+  height: 150px;
+  width: 400px;
 }
 
 #board {
-    width: 360px;
-    height: 360px;
-    background-color:lightblue ;
-    border: 10px rgb(12 103 174);
+  width: 360px;
+  height: 360px;
+  background-color: lightblue;
+  border: 10px rgb(12 103 174);
 
-    margin: 0 auto;
-    display: flex;  
-    flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 #board img {
-    width: 118px;
-    height: 118px;
-    border: 1px rgb(12 103 174);
+  width: 118px;
+  height: 118px;
+  border: 1px rgb(12 103 174);
 }
