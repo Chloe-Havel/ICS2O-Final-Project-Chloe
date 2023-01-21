@@ -1,4 +1,3 @@
-
 let rows = 3;
 let columns = 3;
 
