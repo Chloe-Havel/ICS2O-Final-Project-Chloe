@@ -1,8 +1,8 @@
 let rows = 3;
 let columns = 3;
 
-let currTile
-let otherTile //blank tile
+let currTile;
+let otherTile; //blank tile
 
 let turns = 0;
 
@@ -18,12 +18,12 @@ window.onload = function () {
       tile.src = imgOrder.shift() + ".jpg";
 
       //make the thing drag
-      tile.addEventListener("dragstart", dragStart) //click an image to drag
-      tile.addEventListener("dragover", dragOver) //moving image around while clicked
-      tile.addEventListener("dragenter", dragEnter) //dragging image onto another one
-      tile.addEventListener("dragleave", dragLeave) //dragged image leaving anohter image
-      tile.addEventListener("drop", dragDrop) //drag an image over another image, drop the image
-      tile.addEventListener("dragend", dragEnd) //after drag drop, swap the two tiles
+      tile.addEventListener("dragstart", dragStart); //click an image to drag
+      tile.addEventListener("dragover", dragOver); //moving image around while clicked
+      tile.addEventListener("dragenter", dragEnter); //dragging image onto another one
+      tile.addEventListener("dragleave", dragLeave); //dragged image leaving anohter image
+      tile.addEventListener("drop", dragDrop); //drag an image over another image, drop the image
+      tile.addEventListener("dragend", dragEnd); //after drag drop, swap the two tiles
 
       document.getElementById("board").append(tile);
     }
@@ -39,7 +39,7 @@ function dragOver(e) {
 }
 
 function dragEnter(e) {
-  e.preventDefault()  //this is a click me thingy
+  e.preventDefault(); //this is a click me thingy
 }
 
 function dragLeave() {}
@@ -53,9 +53,9 @@ function dragEnd() {
     return;
   }
 
-  let currCoords = currTile.id.split("-") //ex) "0-0" -> ["0", "0"]
-  let r = parseInt(currCoords[0])
-  let c = parseInt(currCoords[1])
+  let currCoords = currTile.id.split("-"); //ex) "0-0" -> ["0", "0"]
+  let r = parseInt(currCoords[0]);
+  let c = parseInt(currCoords[1]);
 
   let otherCoords = otherTile.id.split("-");
   let r2 = parseInt(otherCoords[0]);
@@ -67,7 +67,7 @@ function dragEnd() {
   let moveUp = c == c2 && r2 == r - 1;
   let moveDown = c == c2 && r2 == r + 1;
 
-  let isAdjacent = moveLeft || moveRight || moveUp || moveDown
+  let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
 
   if (isAdjacent) {
     let currImg = currTile.src;
