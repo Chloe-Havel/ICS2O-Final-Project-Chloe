@@ -11,7 +11,7 @@ let imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3"]
 
 window.onload = function () {
   for (let r = 0; r < rows; r++) {
-    for (let c = 0 c; < columns; c++) {
+    for (let c = 0; c < columns; c++) {
       //<img id="0-0" src="1.jpg">
       let tile = document.createElement("img")
       tile.id = r.toString() + "-" + c.toString()
