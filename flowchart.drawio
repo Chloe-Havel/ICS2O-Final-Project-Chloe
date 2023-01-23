@@ -28,8 +28,14 @@
                 <mxCell id="11" value="let turns = 0" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
                     <mxGeometry x="330" y="310" width="100" height="60" as="geometry"/>
                 </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="15" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="15" value="let imgOrder = [&quot;4&quot;, &quot;2&quot;, &quot;8&quot;, &quot;5&quot;, &quot;1&quot;, &quot;6&quot;, &quot;7&quot;, &quot;9&quot;, &quot;3&quot;]" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
                     <mxGeometry x="315" y="400" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="510" width="100" height="100" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
